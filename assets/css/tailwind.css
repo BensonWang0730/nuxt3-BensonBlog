@@ -14,3 +14,13 @@
   opacity: 0;
   transform: scale(0.99);
 }
+
+.theme-light {
+  --background: #f8f8f8;
+  --text: #313131;
+}
+
+.theme-dark {
+  --background: #313131;
+  --text: #f8f8f8;
+}
