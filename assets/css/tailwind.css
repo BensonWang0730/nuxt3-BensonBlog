@@ -18,9 +18,11 @@
 .theme-light {
   --background: #f8f8f8;
   --text: #313131;
+  --border: rgba(15, 23, 42, 0.1);
 }
 
 .theme-dark {
   --background: #313131;
   --text: #f8f8f8;
+  --border: rgba(248, 250, 252, 0.06);
 }

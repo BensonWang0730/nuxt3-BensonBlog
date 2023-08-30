@@ -1,7 +1,9 @@
 ---
 navigation:
   title: 'Home'
-  icon: '🏡'
+  date: '2023-08-23'
+  tag:
+    - 個人
 ---
 
 # Hello, Content

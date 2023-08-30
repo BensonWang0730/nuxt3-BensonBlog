@@ -2,15 +2,15 @@
   <div
     :class="{
       'theme-light': !darkMode,
-      'theme-dark': darkMode
+      'theme-dark dark': darkMode
     }"
-    class="h-screen bg-themeBackground text-themeText"
+    class="flex min-h-screen flex-col bg-themeBackground text-themeText duration-500 ease-in-out"
   >
-    <!-- <div :class="darkMode ? 'dark' : ''"> -->
     <BaseNavbar @dark-mode="handleDarkMode" />
-    <div class="container mx-auto">
+    <div class="container mx-auto my-10 grow">
       <NuxtPage />
     </div>
+    <BaseFooter />
   </div>
 </template>
 

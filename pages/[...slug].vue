@@ -8,6 +8,7 @@ const { data: blog } = await useAsyncData(slug, () => {
 
 <template>
   <main>
-    <ContentDoc />
+    <ContentDoc class="prose" />
+    <!-- <p>加班施工中</p> -->
   </main>
 </template>
