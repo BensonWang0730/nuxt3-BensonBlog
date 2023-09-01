@@ -7,6 +7,7 @@
       <div>
         <h1>Benson Wang</h1>
         <p>Hello, I'm Benson, Welcome to my web！</p>
+        <p>benson95217@gmail.com</p>
       </div>
     </div>
     <div class="my-20">

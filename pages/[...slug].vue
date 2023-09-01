@@ -33,8 +33,8 @@ const toc = computed(() => {
 <template>
   <main class="flex h-fit items-start">
     <div
-      v-if="data.body"
-      class="sticky right-0 top-10 hidden max-w-[220px] rounded-lg border border-themeBorder p-8 opacity-80 2xl:inline-block"
+      v-if="data"
+      class="sticky right-0 top-10 hidden w-[220px] rounded-lg border border-themeBorder p-8 opacity-80 2xl:inline-block"
     >
       <h2 class="mb-2 text-lg font-medium">目錄</h2>
       <ul class="space-y-2">
@@ -43,7 +43,7 @@ const toc = computed(() => {
             class="line-clamp-1 uppercase"
             :class="{
               'ml-2': item.depth == 2,
-              'ml-4': item.depth > 2
+              'ml-4 text-sm': item.depth > 2
             }"
             :to="`#${item.id}`"
           >
@@ -54,10 +54,10 @@ const toc = computed(() => {
       <!-- {{ toc }} -->
     </div>
     <!-- 暫時作法 xl:pr-[100px] -->
-    <div v-if="data" class="mx-auto max-w-[1000px] xl:pr-[100px]">
+    <div v-if="data" class="mx-auto max-w-[1000px] 2xl:pr-[100px]">
       <ContentRenderer
         :value="data"
-        class="prose mx-auto max-w-[1000px] dark:prose-invert prose-headings:no-underline before:prose-headings:content-['#'] prose-h1:text-center"
+        class="prose mx-auto max-w-[1000px] dark:prose-invert prose-headings:no-underline before:prose-headings:content-['#'] prose-h1:text-center before:prose-h1:content-['']"
       />
       <div class="my-8">
         <a
@@ -71,9 +71,9 @@ const toc = computed(() => {
       </div>
     </div>
 
-    <div v-if="!data" class="text-center">
+    <div v-if="!data" class="mx-auto">
       <!-- <ContentDoc class="prose dark:prose-invert prose-headings:no-underline prose-h1:text-center" /> -->
-      <p>⛔️ 這篇文章沒有內容 ⛔️</p>
+      <p>⛔️ 這篇文章目前沒有內容 ⛔️</p>
     </div>
   </main>
 </template>

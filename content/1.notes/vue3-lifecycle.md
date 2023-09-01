@@ -9,86 +9,123 @@ tags:
 
 # Vue 生命週期
 
----
-
-中的所有逗號（,）替換成斜線（/）。
-
-在正則表達式中：
-
-/ 是正則表達式的開始和結束分隔符。
-, 是要匹配的字符，這裡表示逗號。
-g 是正則表達式的修飾符，表示全局匹配，意味著將所有符合的逗號都替換。
-所以，當你使用 replace(/,/g, '/') 時，它會將字串中的所有逗號替換成斜線。例如：
-
----
-
-中的所有逗號（,）替換成斜線（/）。
-
-在正則表達式中：
-
-/ 是正則表達式的開始和結束分隔符。
-, 是要匹配的字符，這裡表示逗號。
-g 是正則表達式的修飾符，表示全局匹配，意味著將所有符合的逗號都替換。
-所以，當你使用 replace(/,/g, '/') 時，它會將字串中的所有逗號替換成斜線。例如：
-
----
-
-中的所有逗號（,）替換成斜線（/）。
-
-在正則表達式中：
-
-/ 是正則表達式的開始和結束分隔符。
-, 是要匹配的字符，這裡表示逗號。
-g 是正則表達式的修飾符，表示全局匹配，意味著將所有符合的逗號都替換。
-所以，當你使用 replace(/,/g, '/') 時，它會將字串中的所有逗號替換成斜線。例如：---
-
-中的所有逗號（,）替換成斜線（/）。
-
-在正則表達式中：
-
-/ 是正則表達式的開始和結束分隔符。
-, 是要匹配的字符，這裡表示逗號。
-g 是正則表達式的修飾符，表示全局匹配，意味著將所有符合的逗號都替換。
-所以，當你使用 replace(/,/g, '/') 時，它會將字串中的所有逗號替換成斜線。例如：
-
-### 為什麼需要了解
+## 為什麼需要了解
 
 了解 Vue 運作模式，知道什麼地方可以做什麼事！
 
+例如：在 beforeMount() 階段就無法進行 DOM 結構操作。在什麼時候可以發送 API ?
+
+## 生命週期介紹
+
+主要以 Vue3 生命週期說明，了解組件「從掛載到銷毀的整個過程」，主要分成的事件如下：
+
 ---
 
-中的所有逗號（,）替換成斜線（/）。
+onBeforeMount → onMounted → onBeforeUpdate → onUpdate → onBeforeUnmount → onUnmounted
 
-在正則表達式中：
+---
 
-/ 是正則表達式的開始和結束分隔符。
-, 是要匹配的字符，這裡表示逗號。
-g 是正則表達式的修飾符，表示全局匹配，意味著將所有符合的逗號都替換。
-所以，當你使用 replace(/,/g, '/') 時，它會將字串中的所有逗號替換成斜線。例如：---
+個人理解上會分成 3 個部分
 
-中的所有逗號（,）替換成斜線（/）。
+1. Mounted 掛載上去
+2. Update 是件更新
+3. Unmount 卸載
 
-在正則表達式中：
+為什麼要卸載？是為了釋放資源，當事件不需要時就可以使用（定時器、是件監聽），防止接收到不必要的更新。
 
-/ 是正則表達式的開始和結束分隔符。
-, 是要匹配的字符，這裡表示逗號。
-g 是正則表達式的修飾符，表示全局匹配，意味著將所有符合的逗號都替換。
-所以，當你使用 replace(/,/g, '/') 時，它會將字串中的所有逗號替換成斜線。例如：---
+## 測試 code
 
-中的所有逗號（,）替換成斜線（/）。
+<div class='flex flex-col md:flex-row justify-between gap-8  '>
+<div class='w-full sm:w-1/2'>
+vue2
 
-在正則表達式中：
+```javascript=
+<template>
+  <div>
+    <p>{{ message }}</p>
+  </div>
+</template>
 
-/ 是正則表達式的開始和結束分隔符。
-, 是要匹配的字符，這裡表示逗號。
-g 是正則表達式的修飾符，表示全局匹配，意味著將所有符合的逗號都替換。
-所以，當你使用 replace(/,/g, '/') 時，它會將字串中的所有逗號替換成斜線。例如：---
+<script>
+export default {
+  data() {
+    return {
+      message: 'Hello from Vue 2!'
+    };
+  },
+  beforeCreate() {
+    console.log('Vue 2: beforeCreate');
+  },
+  created() {
+    console.log('Vue 2: created');
+  },
+  beforeMount() {
+    console.log('Vue 2: beforeMount');
+  },
+  mounted() {
+    console.log('Vue 2: mounted');
+  },
+  beforeUpdate() {
+    console.log('Vue 2: beforeUpdate');
+  },
+  updated() {
+    console.log('Vue 2: updated');
+  },
+  beforeDestroy() {
+    console.log('Vue 2: beforeDestroy');
+  },
+  destroyed() {
+    console.log('Vue 2: destroyed');
+  }
+};
+</script>
 
-中的所有逗號（,）替換成斜線（/）。
+```
 
-在正則表達式中：
+</div>
+<div class='w-full sm:w-1/2'>
+vue3
 
-/ 是正則表達式的開始和結束分隔符。
-, 是要匹配的字符，這裡表示逗號。
-g 是正則表達式的修飾符，表示全局匹配，意味著將所有符合的逗號都替換。
-所以，當你使用 replace(/,/g, '/') 時，它會將字串中的所有逗號替換成斜線。例如：
+```javascript=
+<template>
+  <div>
+    <p>{{ message }}</p>
+  </div>
+</template>
+
+<script>
+import { ref, onBeforeMount, onMounted, onBeforeUpdate, onUpdated, onBeforeUnmount, onUnmounted } from 'vue';
+
+export default {
+  setup() {
+    const message = ref('Hello from Vue 3!');
+
+    onBeforeMount(() => {
+      console.log('Vue 3: onBeforeMount');
+    });
+    onMounted(() => {
+      console.log('Vue 3: onMounted');
+    });
+    onBeforeUpdate(() => {
+      console.log('Vue 3: onBeforeUpdate');
+    });
+    onUpdated(() => {
+      console.log('Vue 3: onUpdated');
+    });
+    onBeforeUnmount(() => {
+      console.log('Vue 3: onBeforeUnmount');
+    });
+    onUnmounted(() => {
+      console.log('Vue 3: onUnmounted');
+    });
+
+    return {
+      message
+    };
+  }
+};
+</script>
+```
+
+</div>
+</div>
