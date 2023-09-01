@@ -1,10 +1,17 @@
 <script setup></script>
 
 <template>
-  <div class="flex flex-col items-center gap-10 sm:flex-row">
-    <img src="/logo.png" alt="頭像" class="h-20 w-20 sm:h-[180px] sm:w-[180px]" />
-    <p>Hello，我是 Benson，歡迎來到我的網站！</p>
-    <p></p>
+  <div class="mx-auto max-w-[600px]">
+    <div class="flex flex-row items-center justify-between sm:gap-10">
+      <img src="/logo.png" alt="頭像" class="h-20 w-20 sm:h-[180px] sm:w-[180px]" />
+      <div>
+        <h1>Benson Wang</h1>
+        <p>Hello, I'm Benson, Welcome to my web！</p>
+      </div>
+    </div>
+    <div class="my-20">
+      <ContentDoc class="prose dark:prose-invert" />
+    </div>
   </div>
 </template>
 
