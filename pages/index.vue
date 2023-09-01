@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import { Icon } from '@iconify/vue'
+</script>
 
 <template>
   <div class="mx-auto max-w-[600px]">
@@ -11,7 +13,9 @@
       <div>
         <h1>Benson Wang</h1>
         <p>Hello, I'm Benson, Welcome to my web！</p>
-        <p>benson95217@gmail.com</p>
+        <p class="flex items-center gap-1">
+          <Icon icon="ic:baseline-alternate-email" class="h-4 w-4" /> benson95217@gmail.com
+        </p>
       </div>
     </div>
     <div class="my-20">
