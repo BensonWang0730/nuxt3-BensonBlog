@@ -3,7 +3,11 @@
 <template>
   <div class="mx-auto max-w-[600px]">
     <div class="flex flex-row items-center justify-between sm:gap-10">
-      <img src="/logo.png" alt="頭像" class="h-20 w-20 sm:h-[180px] sm:w-[180px]" />
+      <img
+        src="/head.jpeg"
+        alt="頭像"
+        class="h-[100px] w-[100px] rounded-full object-cover sm:h-[180px] sm:w-[180px]"
+      />
       <div>
         <h1>Benson Wang</h1>
         <p>Hello, I'm Benson, Welcome to my web！</p>
