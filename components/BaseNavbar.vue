@@ -48,6 +48,8 @@ onMounted(() => {
   } else {
     setTheme(isDarkModePreferred ? 'dark' : 'light')
   }
+
+  handleResize()
 })
 </script>
 
