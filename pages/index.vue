@@ -4,7 +4,7 @@ import { Icon } from '@iconify/vue'
 
 <template>
   <div class="mx-auto max-w-[600px]">
-    <div class="flex flex-row items-center justify-between sm:gap-10">
+    <div class="flex flex-row items-center justify-between gap-5 sm:gap-10">
       <img
         src="/head.jpeg"
         alt="頭像"

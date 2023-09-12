@@ -14,6 +14,11 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
+    container: {
+      center: true,
+      padding: '20px'
+    },
+
     extend: {
       colors: {
         themeBackground: 'var(--background)',
