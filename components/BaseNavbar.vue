@@ -61,7 +61,9 @@ onMounted(() => {
       <Transition name="menu">
         <ul v-show="menuStatus" class="my-4 grid sm:my-0 sm:grid-cols-3 sm:gap-5">
           <li v-for="(item, key) in navigation" :key="key" class="my-2 font-bold sm:my-0">
-            <NuxtLink :to="item.href" class="my-link"> {{ item.name }}</NuxtLink>
+            <NuxtLink :to="item.href" class="my-link" @click="toggleMenu">
+              {{ item.name }}</NuxtLink
+            >
           </li>
         </ul>
       </Transition>

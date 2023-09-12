@@ -29,7 +29,7 @@ const projectInfo = [
         :key="key"
         class="max-w-[400px] overflow-hidden rounded-lg border border-themeBorder"
       >
-        <img :src="item.file" alt="" class="border-b object-cover" />
+        <img :src="item.file" alt="" class="border-b border-themeBorder object-cover" />
         <div class="p-3">
           <p class="font-bold">{{ item.name }}</p>
           <a
