@@ -27,7 +27,7 @@ const projectInfo = [
       <li
         v-for="(item, key) in projectInfo"
         :key="key"
-        class="max-w-[400px] overflow-hidden rounded-lg border"
+        class="max-w-[400px] overflow-hidden rounded-lg border border-themeBorder"
       >
         <img :src="item.file" alt="" class="border-b object-cover" />
         <div class="p-3">
