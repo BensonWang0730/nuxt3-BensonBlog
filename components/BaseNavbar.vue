@@ -23,7 +23,9 @@ const setTheme = (newTheme: Theme) => {
 const pageWidth = ref()
 const menuStatus = ref(false)
 const toggleMenu = () => {
-  menuStatus.value = !menuStatus.value
+  if (window.innerWidth < 640) {
+    menuStatus.value = !menuStatus.value
+  }
 }
 const handleResize = () => {
   pageWidth.value = window.innerWidth
