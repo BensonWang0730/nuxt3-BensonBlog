@@ -11,6 +11,6 @@ export default defineNuxtConfig({
       charset: 'utf-8',
       link: [{ rel: 'icon', type: 'image/png', href: '/logo.png' }]
     },
-    pageTransition: { name: 'page' }
+    pageTransition: { name: 'page', mode: 'out-in' }
   }
 })

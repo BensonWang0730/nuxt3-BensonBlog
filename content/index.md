@@ -7,7 +7,7 @@ tags:
 
 畢業於逢甲大學精密系統設計系（工學院）
 
-今年 1 月參加了前端工程師的[火箭隊培訓營](https://rocket-offical-website.vercel.app/)，為期 7 個月，目前正在找工作，同時也在等當兵。
+今年 1 月參加了前端工程師的[火箭隊培訓營](https://www.rocket-coding.com/index.html)，為期 7 個月，目前正在求職中，同時也在等當兵。
 
 大學時期就對網頁前端充滿興趣，自學了 JavaScript，最後選擇在畢業後朝著自己的理想邁進。
 

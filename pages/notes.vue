@@ -1,11 +1,23 @@
 <script setup>
-// fetchContentNavigation 回傳值比較簡潔
-// const { data: blogNav } = await useAsyncData('navigation', () => {
-//   return fetchContentNavigation(queryContent('/'))
-// })
+const box = ref(null)
+const data = ref(false)
 
 const { data: notesList } = await useAsyncData('notesList', () => {
   return queryContent('notes').sort({ date: -1 }).find()
+})
+
+const lazyLoading = () => {
+  const option = { threshold: 1 }
+  const observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      console.log('hi')
+    }
+  }, option)
+  observer.observe(box.value)
+}
+
+onMounted(() => {
+  lazyLoading()
 })
 </script>
 
@@ -28,6 +40,8 @@ const { data: notesList } = await useAsyncData('notesList', () => {
         <p>{{ note.date }}</p>
       </li>
     </ul>
+    <div ref="box"></div>
+    <SkeletonNote v-if="data" />
   </div>
 </template>
 

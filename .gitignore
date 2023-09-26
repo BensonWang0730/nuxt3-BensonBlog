@@ -18,6 +18,10 @@ logs
 .fleet
 .idea
 
+# github CI
+github
+.lighthouserc.json
+
 # Local env files
 .env
 .env.*
