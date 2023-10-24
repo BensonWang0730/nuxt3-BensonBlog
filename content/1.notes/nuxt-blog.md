@@ -1,7 +1,7 @@
 ---
 title: 'nuxt-content 做部落格'
 date: '2023-09-01'
-description: '這遍直接紀錄遇到的問題以及如何解決'
+description: '這篇主要紀錄遇到的問題以及如何解決'
 tags:
   - Nuxt3
   - nuxt-content
