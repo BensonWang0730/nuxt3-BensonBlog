@@ -31,10 +31,10 @@ const toc = computed(() => {
 </script>
 
 <template>
-  <main class="flex h-fit items-start">
+  <main class="flex h-fit items-start gap-10">
     <div
       v-if="data"
-      class="sticky right-0 top-10 hidden w-[220px] rounded-lg border border-themeBorder p-8 opacity-80 2xl:inline-block"
+      class="sticky right-0 top-10 hidden w-[220px] rounded-lg border border-themeBorder p-8 opacity-80 xl:inline-block"
     >
       <h2 class="mb-2 text-lg font-medium">目錄</h2>
       <ul class="space-y-2">
@@ -57,7 +57,7 @@ const toc = computed(() => {
     <div v-if="data" class="mx-auto max-w-[1000px] 2xl:pr-[100px]">
       <ContentRenderer
         :value="data"
-        class="prose mx-auto max-w-[1000px] dark:prose-invert prose-headings:no-underline before:prose-headings:content-['#'] prose-h1:text-center before:prose-h1:content-['']"
+        class="prose mx-auto max-w-[1000px] dark:prose-invert prose-headings:no-underline before:prose-headings:content-['#'] prose-h1:text-center before:prose-h1:content-[''] prose-a:no-underline"
       />
       <div class="my-8">
         <a
