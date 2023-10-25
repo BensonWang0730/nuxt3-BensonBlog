@@ -39,7 +39,7 @@ onBeforeMount → onMounted → onBeforeUpdate → onUpdate → onBeforeUnmount 
 <div class='w-full sm:w-1/2'>
 vue2
 
-```javascript=
+```js
 <template>
   <div>
     <p>{{ message }}</p>
@@ -86,7 +86,7 @@ export default {
 <div class='w-full sm:w-1/2'>
 vue3
 
-```javascript=
+```js
 <template>
   <div>
     <p>{{ message }}</p>
@@ -94,36 +94,44 @@ vue3
 </template>
 
 <script>
-import { ref, onBeforeMount, onMounted, onBeforeUpdate, onUpdated, onBeforeUnmount, onUnmounted } from 'vue';
+import {
+  ref,
+  onBeforeMount,
+  onMounted,
+  onBeforeUpdate,
+  onUpdated,
+  onBeforeUnmount,
+  onUnmounted
+} from 'vue'
 
 export default {
   setup() {
-    const message = ref('Hello from Vue 3!');
+    const message = ref('Hello from Vue 3!')
 
     onBeforeMount(() => {
-      console.log('Vue 3: onBeforeMount');
-    });
+      console.log('Vue 3: onBeforeMount')
+    })
     onMounted(() => {
-      console.log('Vue 3: onMounted');
-    });
+      console.log('Vue 3: onMounted')
+    })
     onBeforeUpdate(() => {
-      console.log('Vue 3: onBeforeUpdate');
-    });
+      console.log('Vue 3: onBeforeUpdate')
+    })
     onUpdated(() => {
-      console.log('Vue 3: onUpdated');
-    });
+      console.log('Vue 3: onUpdated')
+    })
     onBeforeUnmount(() => {
-      console.log('Vue 3: onBeforeUnmount');
-    });
+      console.log('Vue 3: onBeforeUnmount')
+    })
     onUnmounted(() => {
-      console.log('Vue 3: onUnmounted');
-    });
+      console.log('Vue 3: onUnmounted')
+    })
 
     return {
       message
-    };
+    }
   }
-};
+}
 </script>
 ```
 

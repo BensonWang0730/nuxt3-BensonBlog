@@ -36,7 +36,7 @@ tags:
 
 content/notes/nuxt-blog.md
 
-```
+```md
 ---
 title: 'nuxt-content 做部落格'
 date: '2023-09-01'
@@ -51,7 +51,7 @@ tags:
 
 pages/notes.vue
 
-```
+```js
 const { data: notesList } = await useAsyncData('notesList', () => {
   return queryContent('notes').sort({ date: -1 }).find()
 })
@@ -86,7 +86,7 @@ assets/css/tailwind.css
 
 設定 nuxt.config，加入 pageTransition 的設定，name 屬性要輸入的值 .**page**-enter-from 開頭的 page，可以依照個人設定更改。
 
-```
+```js
 export default defineNuxtConfig({
   modules: ['@nuxt/content', '@nuxtjs/tailwindcss'],
   content: {
