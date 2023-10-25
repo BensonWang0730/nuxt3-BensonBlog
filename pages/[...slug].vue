@@ -57,7 +57,7 @@ const toc = computed(() => {
     <div v-if="data" class="mx-auto max-w-[1000px] 2xl:pr-[100px]">
       <ContentRenderer
         :value="data"
-        class="prose mx-auto max-w-[1000px] dark:prose-invert prose-headings:no-underline before:prose-headings:content-['#'] prose-h1:text-center before:prose-h1:content-[''] prose-a:no-underline"
+        class="prose mx-auto max-w-[1000px] dark:prose-invert prose-headings:no-underline before:prose-headings:content-['#'] prose-h1:text-center before:prose-h1:content-[''] prose-a:no-underline prose-pre:bg-gray-100 dark:prose-pre:bg-black"
       />
       <div class="my-8">
         <a
