@@ -54,7 +54,7 @@ const toc = computed(() => {
       <!-- {{ toc }} -->
     </div>
     <!-- 暫時作法 xl:pr-[100px] -->
-    <div v-if="data" class="mx-auto max-w-[1000px] 2xl:pr-[100px]">
+    <div v-if="data" class="mx-auto max-w-full md:max-w-[1000px] xl:pr-10 2xl:pr-[100px]">
       <ContentRenderer
         :value="data"
         class="prose mx-auto max-w-[1000px] dark:prose-invert prose-headings:no-underline before:prose-headings:content-['#'] prose-h1:text-center before:prose-h1:content-[''] prose-a:no-underline prose-pre:bg-gray-100 dark:prose-pre:bg-black"
