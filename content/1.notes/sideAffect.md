@@ -4,8 +4,8 @@ date: '2024-1-25'
 description: '在錯誤使用 computed 的情況下，遇到的問題，並一路由 Side Affect 看到 Pure Function。之後會在看看什麼是 Functional Programming。'
 tags:
   - Side Affect
-  - Computed
   - Function Programming
+  - computed
 ---
 
 ### 什麼是 Side Affect ?
